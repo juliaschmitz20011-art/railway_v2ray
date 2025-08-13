@@ -1,0 +1,35 @@
+{
+  "inbounds": [
+    {
+      "port": {{PORT}},
+      "listen": "0.0.0.0",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "{{UUID}}",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "serverNames": ["{{REALITY_SERVER_NAME}}"],
+          "privateKey": "",
+          "publicKey": "{{REALITY_PUBLIC_KEY}}",
+          "shortIds": ["{{REALITY_SHORT_ID}}"]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
